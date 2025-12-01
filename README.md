@@ -1,7 +1,7 @@
-# Relatório de Atividade – Cliente MQTT em Node.js
+# Ponderada MQTT - Semana 07
 
-Este repositório contém os arquivos necessários para a atividade de redes/IoT em duplas.  
-O objetivo é testar o protocolo MQTT utilizando um broker público, desenvolver scripts em **Node.js** que publiquem e se subscrevam em um tópico, e simular ataques que afetem **confidencialidade**, **integridade** e **disponibilidade**.
+Este repositório contém os arquivos necessários para a ponderada da Semana 07.
+Neste README.md, adicionei instruções pra executar os scripts. O relatório pedido no Card da Ponderada está em [RELATORIO.md](RELATORIO.md).
 
 ## Estrutura dos arquivos
 
@@ -64,7 +64,3 @@ O assinante deverá receber a mensagem. Repita o envio com diferentes textos. Te
    node flood_publish.js mqtt://test.mosquitto.org topico/unico/dupla 50
    ```
    Ajuste o intervalo conforme necessário para observar o comportamento do broker. No relatório comentamos os riscos de flood.
-
-## Observação de segurança
-
-Esta atividade utiliza um **broker público**, onde qualquer usuário pode publicar ou se subscrever, sem garantia de privacidade. O artigo que lista brokers públicos enfatiza que esses serviços não devem ser usados em produção, pois não há privacidade e qualquer dispositivo pode interagir. Use-os apenas para testes e exercícios.
