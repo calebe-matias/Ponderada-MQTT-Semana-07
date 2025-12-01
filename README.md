@@ -1,7 +1,7 @@
 # Ponderada MQTT - Semana 07
 
 Este repositório contém os arquivos necessários para a ponderada da Semana 07.
-Neste README.md, adicionei instruções pra executar os scripts. O relatório pedido no Card da Ponderada está em [RELATORIO.md](RELATORIO.md).
+No README.md, adicionei instruções pra executar os scripts. O relatório pedido no Card da Ponderada está em [RELATORIO.md](RELATORIO.md).
 
 ## Estrutura dos arquivos
 
