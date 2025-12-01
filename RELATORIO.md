@@ -1,15 +1,15 @@
 # Relatório da Ponderada Semana 07
 ## Introdução
 
-Nesta atividade, utilizo o protocolo **MQTT** para avaliar sua segurança. Como MQTT é um protocolo de mensagens leve baseado no modelo *publish/subscribe*, muito utilizado em IoT, podem haver algumas brechas de segurança. A comunicação MQTT tem três componentes: **cliente publicador** (envia mensagens), **cliente assinante** (recebe mensagens) e **broker** (intermediário que roteia as mensagens entre publicadores e assinantes). Na ponderada, usei scripts em **NodeJS** como cliente MQTT pra simular as operações de publicação e assinatura, além de ataques que afetam confidencialidade, integridade e disponibilidade.
+Nesta atividade, utilizo o protocolo **MQTT** pra avaliar requisitos de segurança. Como MQTT é um protocolo de mensagens baseado no modelo *publish/subscribe*, muito utilizado em IoT, podem haver algumas brechas de segurança. A comunicação MQTT tem três componentes: **cliente publicador**, **cliente assinante** e **broker**. Na ponderada, usei **NodeJS** para criar clientes MQTT e simular as operações de publicação e assinatura, além de ataques que afetam confidencialidade, integridade e disponibilidade.
 
 ## Escolha do cliente MQTT
 
-Diversos clientes MQTT estão disponíveis, incluindo aplicativos móveis (MQTT Dashboard, MQTT Dash, MQTTool) e clientes web como o HiveMQ Websocket Client. Para maior flexibilidade, optei por desenvolver meus próprios scripts em **NodeJS** usando a biblioteca `mqtt`. Isso permitiu compreender melhor o funcionamento do protocolo, automatizar os testes e gerar código reutilizável. Com o NodeJS pude criar scripts para publicar, subscrever, executar ataques de flood e tampering e analisar os resultados.
+Diversos clientes MQTT estão disponíveis, incluindo aplicativos móveis (MQTT Dashboard, MQTT Dash, MQTTool) e clientes web como o HiveMQ Websocket Client. Optei por desenvolver meus próprios scripts em **NodeJS** usando a biblioteca `mqtt`. Isso permitiu compreender melhor o funcionamento do protocolo e automatizar os testes. Com o NodeJS pude criar scripts para publicar, subscrever, executar ataques de flood e tampering e analisar os resultados.
 
 ## Seleção do broker público
 
-Pesquisei brokers públicos em uma lista de “10 free public/private MQTT brokers for testing & prototyping”. Nessa lista são apresentados brokers como **Eclipse**, **Mosquitto**, **HiveMQ**, **Flespi**, **Dioty** e **EMQX**, com endereços e portas padrão para conexões TCP e TLS【735741567793548†L24-L50】. A lista alerta que brokers públicos não devem ser utilizados em produção pois qualquer dispositivo pode se conectar, publicar e subscrever sem privacidade【735741567793548†L24-L31】. Escolhi o broker **test.mosquitto.org**, que opera na porta TCP 1883 e não exige autenticação, ideal para fins de aprendizado.
+Pesquisei brokers públicos na lista de “10 free public/private MQTT brokers for testing & prototyping” que estava disponível no Card do Adalobe. Nessa lista são apresentados brokers como **Eclipse**, **Mosquitto**, **HiveMQ**, **Flespi**, **Dioty** e **EMQX**, com endereços e portas padrão para conexões TCP e TLS【735741567793548†L24-L50】. A lista alerta que brokers públicos não devem ser utilizados em produção pois qualquer dispositivo pode se conectar, publicar e subscrever sem privacidade【735741567793548†L24-L31】. Escolhi o broker **test.mosquitto.org**, que opera na porta TCP 1883 e não precisa de autenticação.
 
 ## Conexão usando identificador aleatório
 
